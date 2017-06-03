@@ -16,16 +16,41 @@ const PLAYERS = [
     }
 ];
 
+function Stats(props) {
+    const totalPlayers = props.players.length;
+
+    return (
+        <table className="stats">
+            <tbody>
+                <tr>
+                    <td>Players:</td>
+                    <td>{totalPlayers}</td>
+                </tr>
+                <tr>
+                    <td>Total Pts:</td>
+                    <td>123</td>
+                </tr>
+            </tbody>
+        </table>
+    );
+}
+
+Stats.prototype = {
+    players: React.PropTypes.array.isRequired
+};
+
 function Header(props) {
     return (
         <div className="header">
-          <h1>{props.title}</h1>
+            <Stats players={props.players}/>
+            <h1>{props.title}</h1>
         </div>
     );
 }
 
 Header.propTypes = {
-  title: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
+    players: React.PropTypes.array.isRequired
 };
 
 function Counter(props) {
@@ -93,7 +118,7 @@ const Application = React.createClass({
     render: function () {
         return (
             <div className="scoreboard">
-                <Header title={this.props.title}/>
+                <Header title={this.props.title} players={this.state.players}/>
 
                 <div className="players">
                     {this.state.players.map((player, index)=> {
