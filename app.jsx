@@ -17,15 +17,32 @@ const PLAYERS = [
 ];
 
 const AddPlayerForm = React.createClass({
+    propTypes: {
+        onAdd: React.PropTypes.func.isRequired
+    },
+
+    getInitialState: function () {
+      return {
+          name: ''
+      };
+    },
+
+    onNameChange: function (e) {
+      this.setState({name: e.target.value});
+    },
+
     onSubmit: function (e) {
         e.preventDefault();
+
+        this.props.onAdd(this.state.name);
+        this.setState({name:''});
     },
 
     render: function () {
         return (
             <div className="add-player-form">
                 <form onSubmit={this.onSubmit}>
-                    <input type="text" />
+                    <input type="text" value={this.state.name} onChange={this.onNameChange} />
                     <input type="submit" value="Add Player"/>
                 </form>
             </div>
@@ -135,6 +152,10 @@ const Application = React.createClass({
       this.setState(this.state);
     },
 
+    onPlayerAdd: function (name) {
+      console.log('Player Added', name)
+    },
+
     render: function () {
         return (
             <div className="scoreboard">
@@ -151,7 +172,7 @@ const Application = React.createClass({
                         );
                     }.bind(this))}
                 </div>
-                <AddPlayerForm/>
+                <AddPlayerForm onAdd={this.onPlayerAdd}/>
             </div>
         );
     }
