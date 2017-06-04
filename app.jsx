@@ -16,6 +16,8 @@ const PLAYERS = [
     }
 ];
 
+let nextId = 4;
+
 const AddPlayerForm = React.createClass({
     propTypes: {
         onAdd: React.PropTypes.func.isRequired
@@ -153,7 +155,14 @@ const Application = React.createClass({
     },
 
     onPlayerAdd: function (name) {
-      console.log('Player Added', name)
+      console.log('Player Added', name);
+      this.state.players.push({
+          name: name,
+          score: 0,
+          id: nextId
+      });
+        this.setState(this.state);
+        nextId += 1;
     },
 
     render: function () {
