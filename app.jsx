@@ -22,7 +22,7 @@ const Stopwatch = React.createClass({
        getInitialState: function () {
            return {
                running: false,
-               elapsedtTime: 0,
+               elapsedTime: 0,
                previousTime: 0
            }
        },
@@ -36,37 +36,41 @@ const Stopwatch = React.createClass({
        },
 
        onTick: function () {
-           if(this.state.running) {
+           if (this.state.running) {
              const now = Date.now();
              this.setState({
                  previousTime: now,
                  elapsedTime: this.state.elapsedTime + (now - this.state.previousTime)
              });
            }
-           console.log('On Tick');
        },
 
        onStart: function () {
-           this.setState({ running: true });
-       },
-
-
-       onStop: function () {
            this.setState({
                running: false,
                previousTime: Date.now()
            });
        },
 
-       onReset: function () {
 
+       onStop: function () {
+           this.setState({ running: false });
+       },
+
+       onReset: function () {
+           this.setState({
+               elapsedTime: 0,
+               previousTime: Date.now()
+           });
        },
 
        render: function () {
+           const seconds = Math.floor(this.state.elapsedTime / 1000);
+
            return (
                <div className="stopwatch">
                    <h2>Stopwatch</h2>
-                   <div className="stopwatch-time">0</div>
+                   <div className="stopwatch-time">{ seconds }</div>
                    { this.state.running ?
                    <button onClick={this.onStop}>Stop</button> :
                    <button onClick={this.onStart}>Start</button>
@@ -206,7 +210,7 @@ const Application = React.createClass({
 
     getInitialState: function () {
       return {
-          players: this.props.initialPlayers,
+          players: this.props.initialPlayers
       };
     },
 
