@@ -21,8 +21,29 @@ let nextId = 4;
 const Stopwatch = React.createClass({
        getInitialState: function () {
            return {
-               running: false
+               running: false,
+               elapsedtTime: 0,
+               previousTime: 0
            }
+       },
+
+       componentDidMount: function () {
+           this.interval = setInterval(this.onTick, 100);
+       },
+
+       componentWillUnmount: function () {
+           clearInterval(this.interval);
+       },
+
+       onTick: function () {
+           if(this.state.running) {
+             const now = Date.now();
+             this.setState({
+                 previousTime: now,
+                 elapsedTime: this.state.elapsedTime + (now - this.state.previousTime)
+             });
+           }
+           console.log('On Tick');
        },
 
        onStart: function () {
@@ -31,7 +52,10 @@ const Stopwatch = React.createClass({
 
 
        onStop: function () {
-           this.setState({ running: false });
+           this.setState({
+               running: false,
+               previousTime: Date.now()
+           });
        },
 
        onReset: function () {
