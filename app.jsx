@@ -19,16 +19,38 @@ const PLAYERS = [
 let nextId = 4;
 
 const Stopwatch = React.createClass({
-   render: function () {
-       return (
-           <div className="stopwatch">
-               <h2>Stopwatch</h2>
-               <div className="stopwatch-time">0</div>
-               <button>Start</button>
-               <button>Reset</button>
-           </div>
-       );
-   }
+       getInitialState: function () {
+           return {
+               running: false
+           }
+       },
+
+       onStart: function () {
+           this.setState({ running: true });
+       },
+
+
+       onStop: function () {
+           this.setState({ running: false });
+       },
+
+       onReset: function () {
+
+       },
+
+       render: function () {
+           return (
+               <div className="stopwatch">
+                   <h2>Stopwatch</h2>
+                   <div className="stopwatch-time">0</div>
+                   { this.state.running ?
+                   <button onClick={this.onStop}>Stop</button> :
+                   <button onClick={this.onStart}>Start</button>
+                   }
+                   <button onClick={this.onReset}>Reset</button>
+               </div>
+           );
+       }
 });
 
 const AddPlayerForm = React.createClass({
