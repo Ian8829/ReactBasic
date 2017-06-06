@@ -1,3 +1,8 @@
-/**
- * Created by ian on 06/06/2017.
- */
+import React from 'react';
+import { render } from 'react-dom';
+import Scoreboard from './Scoreboard';
+
+render(
+   <Scoreboard/>,
+    document.querySelector('#root')
+);
