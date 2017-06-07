@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5056aa12-e1a4-4881-937a-cf87871ecbbd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/ReactBasicsProject.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.babelrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.idea/reactReductBasic.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/actions/player.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/actiontypes/player.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/AddPlayerForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/Counter.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/Header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/Player.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/Stats.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/components/Stopwatch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/containers/Scoreboard.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/src/reducers/player.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/reactReductBasic/webpack.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/babel-browser.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react-dom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/react.js" afterPath="" />
-    </list>
+    <list default="true" id="5056aa12-e1a4-4881-937a-cf87871ecbbd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -55,8 +21,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reactReductBasic/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="80">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,6 +105,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ReactBasicsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReactBasicsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReactBasicsProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactReductBasic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -483,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/reactReductBasic/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="80">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
           <folding />
         </state>
       </provider>
